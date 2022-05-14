@@ -30,11 +30,6 @@ public class Movie
         }
     }
 
-    public int getPriceCode()
-    {
-        return price.getPriceCode();
-    }
-
     public String getTitle ()
     {
         return title;
