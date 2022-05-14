@@ -7,10 +7,10 @@ class Customer
     private String name;
     private List<Rental> rentals;
 
-    public Customer (String newname)
+    public Customer (String name)
     {
         rentals = new ArrayList<>();
-        name = newname;
+        this.name = name;
     };
 
     public void addRental(Rental arg)

@@ -6,10 +6,10 @@ public class Movie
     private String title;
     private Price price;
 
-    public Movie(String newtitle, int newpriceCode)
+    public Movie(String title, int priceCode)
     {
-        title = newtitle;
-        setPriceCode(newpriceCode);
+        this.title = title;
+        setPriceCode(priceCode);
     }
 
     public void setPriceCode(int priceCode)

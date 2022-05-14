@@ -3,10 +3,10 @@ class Rental
     private Movie movie;
     private int daysRented;
 
-    public Rental(Movie newmovie, int newdaysRented)
+    public Rental(Movie movie, int daysRented)
     {
-        movie = newmovie;
-        daysRented = newdaysRented;
+        this.movie = movie;
+        this.daysRented = daysRented;
     }
 
     public int getDaysRented()
