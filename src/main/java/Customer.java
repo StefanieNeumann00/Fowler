@@ -4,24 +4,24 @@ import java.util.*;
 
 class Customer
 {
-    private String name;
-    private List<Rental> rentals;
+    private final String name;
+    private final List<Rental> rentals;
 
     public Customer (String name)
     {
         rentals = new ArrayList<>();
         this.name = name;
-    };
+    }
 
     public void addRental(Rental arg)
     {
         rentals.add(arg);
-    };
+    }
 
     public String getName ()
     {
         return name;
-    };
+    }
 
     public String statement()
     {
@@ -57,8 +57,7 @@ class Customer
 
         for (Rental rental: rentals)
         {
-            double thisAmount = 0;
-            thisAmount = rental.getAmount();
+            double thisAmount = rental.getAmount();
             totalAmount += thisAmount;
         }
 

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FowlerTest
 {
-    private String expectedResult = "Rental Record for joe\n" +
+    private final String expectedResult = "Rental Record for joe\n" +
             "\tTitle\t\tDays\tAmount\n" +
             "\tmovie1\t\t10\t30.0\n" +
             "\tmovie2\t\t5\t4.5\n" +
