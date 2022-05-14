@@ -27,8 +27,9 @@ class Customer
     {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        String result = "Rental Record for " + this.getName() + "\n";
-        result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
+        StringBuilder result = new StringBuilder();
+        result.append("Rental Record for " + this.getName() + "\n");
+        result.append("\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n");
 
         for (Rental rental: rentals)
         {
@@ -38,13 +39,13 @@ class Customer
             // add frequent renter points
             frequentRenterPoints = calculateRenterPoints(frequentRenterPoints, rental);
             //show figures for this rental
-            result += "\t" + rental.getMovie().getTitle()+ "\t" + "\t" + rental.getDaysRented() + "\t" + thisAmount + "\n";
+            result.append("\t" + rental.getMovie().getTitle()+ "\t" + "\t" + rental.getDaysRented() + "\t" + thisAmount + "\n");
             totalAmount += thisAmount;
         }
         //add footer lines
-        result += "Amount owed is " + totalAmount + "\n";
-        result += "You earned " + frequentRenterPoints + " frequent renter points";
-        return result;
+        result.append("Amount owed is " + totalAmount + "\n");
+        result.append("You earned " + frequentRenterPoints + " frequent renter points");
+        return result.toString();
     }
 
     private int calculateRenterPoints(int frequentRenterPoints, Rental rental) {
