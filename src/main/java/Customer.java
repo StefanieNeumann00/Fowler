@@ -26,16 +26,28 @@ class Customer
     public String statement()
     {
         StringBuilder result = new StringBuilder();
-        result.append("Rental Record for " + this.getName() + "\n");
-        result.append("\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n");
+        result.append("Rental Record for ");
+        result.append(this.getName());
+        result.append("\n");
+        result.append("\tTitle\t\tDays\tAmount\n");
 
         for (Rental rental: rentals)
         {
-            result.append("\t" + rental.getMovie().getTitle()+ "\t" + "\t" + rental.getDaysRented() + "\t" + rental.getAmount() + "\n");
+            result.append("\t");
+            result.append(rental.getMovie().getTitle());
+            result.append("\t\t");
+            result.append(rental.getDaysRented());
+            result.append("\t");
+            result.append(rental.getAmount());
+            result.append("\n");
         }
 
-        result.append("Amount owed is " + calculateAmount() + "\n");
-        result.append("You earned " + calculateFrequentRenterPoints() + " frequent renter points");
+        result.append("Amount owed is ");
+        result.append(calculateAmount());
+        result.append("\n");
+        result.append("You earned ");
+        result.append(calculateFrequentRenterPoints());
+        result.append(" frequent renter points");
         return result.toString();
     }
 
