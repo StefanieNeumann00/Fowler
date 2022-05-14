@@ -1,10 +1,5 @@
 public class ChildrensPrice extends Price
 {
-    public int getPriceCode()
-    {
-        return Movie.CHILDRENS;
-    }
-
     public double getAmount(int daysRented)
     {
         if (daysRented > 3)
